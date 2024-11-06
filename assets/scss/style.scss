@@ -53,6 +53,46 @@ body {
   padding-right: $grid-gutter-width;
 }
 
+.container a {
+  text-decoration: none;
+}
+
+// Footer: Create equal columns that float next to each other
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+.row {
+  width: 100%;
+}
+
+// Footer: Create responsive stackable Columns
+@media screen and (min-width: 900px) {
+    .footer-block {
+        display: block;
+        float: left;
+        width: 24.9%;
+        vertical-align: top;
+    }
+
+}
+@media screen and (min-width: 600px) and (max-width: 899px) {
+    .footer-block {
+        display: block;
+        float: left;
+        width: 33.3%;
+        vertical-align: top;
+    }
+
+}
+@media screen and (max-width: 599px) {
+    .footer-block {
+        display: block;
+    }
+}
+
 // Display breakpoints for DEV
 // body:after {
 //   color: #000000;

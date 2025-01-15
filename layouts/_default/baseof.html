@@ -10,7 +10,9 @@
   <link rel="icon" href="{{ "images/favicon.png" | absURL}}">
 
   {{ if hugo.IsServer }}
+
   {{ $style := resources.Get "scss/style.scss" | toCSS (dict "transpiler" "dartsass" "targetPath" "css/style.css" "enableSourceMap" true) }}
+
   <link rel="stylesheet" href="{{ ($style).RelPermalink }}">
   {{ else }}
   {{ $style := resources.Get "scss/style.scss" | toCSS (dict "transpiler" "dartsass" "targetPath" "css/style.css" "enableSourceMap" false) }}
